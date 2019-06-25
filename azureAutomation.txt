@@ -1,0 +1,10 @@
+1. Automate VM
+
+2. Automate RG
+
+3. Automate VN
+
+4. Automate SN
+
+5. Automate NRG
+
