@@ -1,4 +1,22 @@
+1. COnnect to azure and list current resources
+
 1. Automate VM
+        $cred = get-credential -message "enter username and password for this vm"
+
+        $vmParams = @{
+        ResourceGroupName = 'TutorialResources'
+        Name = 'Slim-V'
+        Location = 'eastus'
+        ImageName = 'Win2016Datacenter'
+        PublicIpAddressName = 'slpublicip'
+        Credential = $cred
+        OpenPorts = 3389
+           }
+$newVM1 = New-AzVM @vmParams
+
+$publicIP Get-AzPublicIpAddress -Name slpublicip -ResourceGroupName TutorialResources | select-object ipaddress
+
+
 
 2. Automate RG
 
@@ -7,4 +25,7 @@
 4. Automate SN
 
 5. Automate NRG
+
+
+
 
