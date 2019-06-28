@@ -16,6 +16,10 @@ $newVM1 = New-AzVM @vmParams
 
 $publicIP Get-AzPublicIpAddress -Name slpublicip -ResourceGroupName TutorialResources | select-object ipaddress
 
+remove RG and everything in it. 
+$job = Remove-AzResourceGroup -Name TutorialResources -Force -AsJob
+
+$job
 
 
 2. Automate RG
